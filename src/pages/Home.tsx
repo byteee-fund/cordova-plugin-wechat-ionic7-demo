@@ -21,7 +21,7 @@
  */
 
 
-import { IonContent, IonHeader, IonPage, IonTitle, IonButton, IonGrid, IonRow, IonToolbar, IonList, IonItem } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonFooter, IonGrid, IonRow, IonToolbar, IonList, IonItem } from '@ionic/react';
 import React, { useEffect } from 'react';
 
 
@@ -188,6 +188,11 @@ const Home: React.FC = () => {
           </IonList>
         </div>
       </IonContent>
+      <IonFooter>
+        <IonToolbar>
+          <IonTitle>2024 ©  BSF</IonTitle>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };

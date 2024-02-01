@@ -53,6 +53,8 @@ const Home: React.FC = () => {
     state = "_" + (+new Date());
 
       window.Wechat.login({scope, state}, function (response) {
+        console.log("login result")
+        console.log(response);
           alert(JSON.stringify(response));
       }, function (reason) {
           alert("Failed: " + reason);
@@ -67,6 +69,7 @@ const Home: React.FC = () => {
         text: "测试分享",
         scene: Wechat.Scene.TIMELINE
       }, function () {
+        console.log("share result")
         alert("Success");
       }, function (reason) {
         console.error(reason);

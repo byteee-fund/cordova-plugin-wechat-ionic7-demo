@@ -67,7 +67,7 @@ const Home: React.FC = () => {
     if (window.Wechat) {
       window.Wechat.shareText({
         text: "测试分享",
-        scene: Wechat.Scene.TIMELINE
+        scene: window.Wechat.Scene.TIMELINE
       }, function () {
         console.log("share result")
         alert("Success");
@@ -82,14 +82,13 @@ const Home: React.FC = () => {
 
     if (window.Wechat) {
       var params = {
-        timeStamp: '1667792176',
-        mchId: '1800009365',
-        prepayId: 'wx07113616363804b19dde94884922030000',
-        package: 'Sign=WXPay',
-        nonceStr: '8ne443gjxxg',
-        sign: '4FF5900870B5C5BCB089789BC004156426C46512CE566DB17C131747E09ADEBA'
-      };
-     
+        "mchId": "1634490117",
+        "prepayId": "wx08003856845618cb07d4c6c18119400001",
+        "package": "Sign=WXPay",
+        "nonceStr": "rfSvBjwu4yd9zpazvmDyZtzDNSjz1m5t",
+        "timeStamp": "1723048736",
+        "sign": "ZbdI4AHWJpNXUXuW5cIK+txks7aP0ijZIV7//VMcq15Rb78w0OlGVeyF8J81El3IMinceJ7Kk3e0Pj/lKEHBu0qR+at50MkgmQ2YAnaFaWtpPFHHZqbNvG4Ptf4VQOxGB/oPoPQqmpeSiV4hKiED9o5dyPEjLemEYWw9Dd3xsq1n1lWLocyVtwdR3AIgRFdrOher6MHnSvPx46y73EohWIXPKbNJd1eWEEDm7D2lMaC61ptfhEgdqnLKlJKFEDXYBEFMH9Cz54xjw/Oj8V6qyV7dUAAuultVT6VPKMuoxL9L5nDIftxzHzYPKJprpPKyZXhK5xepVGHFyAfFzGBqRw=="
+      }
       window.Wechat.requestPayment(params, function () {
         alert("Success");
       }, function (reason) {
@@ -103,7 +102,7 @@ const Home: React.FC = () => {
       var params = {
         userName: 'gh_67210fc11b59',
         path: 'pages/index/index?name1=key1&name2=key2',
-        miniprogramType: Wechat.Mini.RELEASE 
+        miniprogramType: window.Wechat.Mini.RELEASE
       };
       
       window.Wechat.launchMiniProgram(params,function(data){

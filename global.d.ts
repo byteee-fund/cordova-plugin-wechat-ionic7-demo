@@ -3,6 +3,7 @@ interface Window {
         isWXAppInstalled(callback: (installed: boolean) => void, errorCallback: (reason: any) => void): void;
         login(params: {scope: string, state: string}, callback: (response: any) => void, errorCallback: (reason: any) => void): void;
         shareText(params: {text: string, scene: number}, callback: () => void, errorCallback: (reason: any) => void): void;
+        shareWebpage(params: {title: string, description: string, webpageUrl: string, thumbPath: string, scene: number}, callback: () => void, errorCallback: (reason: any) => void): void;
         requestPayment(params: any, callback: () => void, errorCallback: (reason: any) => void): void;
         launchMiniProgram(params: any, callback: (data: any) => void, errorCallback: (reason: any) => void): void;
         launchWechatApp(callback: (data: any) => void, errorCallback: (err: any) => void): void;

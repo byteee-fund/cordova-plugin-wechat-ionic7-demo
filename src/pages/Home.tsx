@@ -65,9 +65,12 @@ const Home: React.FC = () => {
   const handleShare = () => {
 
     if (window.Wechat) {
-      window.Wechat.shareText({
-        text: "测试分享",
-        scene: window.Wechat.Scene.TIMELINE
+      window.Wechat.shareWebpage({
+        webpageUrl: 'https://byteee.fund',
+        title: '分享视频',
+        description: '这是一个视频',
+        thumbPath: 'https://image.eclasszone.cn/app-h5/eclass-share-logo.png',
+        scene: 0,
       }, function () {
         console.log("share result")
         alert("Success");
@@ -75,6 +78,17 @@ const Home: React.FC = () => {
         console.error(reason);
         alert("Failed: " + reason);
       });
+
+      // window.Wechat.shareText({
+      //   text: "测试分享",
+      //   scene: window.Wechat.Scene.TIMELINE
+      // }, function () {
+      //   console.log("share result")
+      //   alert("Success");
+      // }, function (reason) {
+      //   console.error(reason);
+      //   alert("Failed: " + reason);
+      // });
     }
   }
 
